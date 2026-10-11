@@ -1,0 +1,6 @@
+:HL["/Yamica/_next/static/chunks/2kbuvhl37l1wm.css","style"]
+:HL["/Yamica/fonts/instrument-serif.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Yamica/fonts/instrument-sans.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
+0:{"b":"EbG320t13FPpuxvDk6M3g","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
