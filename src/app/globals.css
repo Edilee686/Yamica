@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+/* @font-face rules live in app/layout.tsx so they can carry the deploy base path. */
+
+/* Design tokens */
+@theme {
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f7f3ec;
+  --color-surface: #fffdf9;
+  --color-surface-2: #f1ece3;
+  --color-surface-3: #e9e2d6;
+  --color-line: #e2dacd;
+  --color-line-strong: #cfc5b5;
+  --color-ink: #2b2826;
+  --color-ink-2: #57514c;
+  --color-ink-3: #6f6862;
+  --color-ink-4: #9a928a;
+
+  --color-lilac: #a893c4;
+  --color-lilac-strong: #6e5690;
+  --color-lilac-deep: #574373;
+  --color-lilac-soft: #ebe4f3;
+  --color-lilac-wash: #f4f0f8;
+  --color-sage: #a9b89e;
+  --color-sage-soft: #e5ebdf;
+  --color-sage-deep: #55684d;
+  --color-blush: #e9c9c0;
+  --color-blush-soft: #f7e9e4;
+  --color-butter: #efd98f;
+  --color-butter-soft: #f8f0d2;
+  --color-danger: #a63d32;
+  --color-danger-soft: #f6e2de;
+  --color-success: #3f6b45;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-soft: 0 1px 2px rgb(43 40 38 / 0.05), 0 4px 16px rgb(43 40 38 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(43 40 38 / 0.06), 0 12px 32px rgb(43 40 38 / 0.12);
+  --shadow-pop: 0 8px 40px rgb(43 40 38 / 0.18);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-fade-up: fade-up 0.45s var(--ease-out-soft) both;
+  --animate-fade-in: fade-in 0.3s ease both;
+  --animate-pop: pop 0.25s var(--ease-out-soft) both;
+  --animate-sheet: sheet-up 0.32s var(--ease-out-soft) both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-lilac-strong);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--color-lilac-soft);
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.02;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-ink-3);
+  }
+  .field {
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line-strong);
+    border-radius: var(--radius-sm);
+    padding: 0.55rem 0.75rem;
+    color: var(--color-ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .field:hover {
+    border-color: var(--color-ink-4);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-lilac-strong);
+    box-shadow: 0 0 0 3px var(--color-lilac-soft);
+  }
+  .checker {
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #eee8de 25%, transparent 25%), linear-gradient(-45deg, #eee8de 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #eee8de 75%), linear-gradient(-45deg, transparent 75%, #eee8de 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  }
+  .canvas-dots {
+    background-color: var(--color-surface-2);
+    background-image: radial-gradient(rgb(43 40 38 / 0.09) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  .garment-selection path:last-child {
+    animation: march 1.2s linear infinite;
+  }
+}
+
+@keyframes march {
+  to { stroke-dashoffset: -20; }
+}
+
+input[type="range"] {
+  accent-color: var(--color-lilac-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tooltips: any element with .tip and data-tip */
+.tip[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 60;
+  pointer-events: none;
+  white-space: nowrap;
+  background: var(--color-ink);
+  color: var(--color-surface);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: none;
+  opacity: 0;
+  transform: translate(-50%, 2px);
+  transition: opacity 0.12s ease 0.25s, transform 0.12s ease 0.25s;
+  inset-inline-start: 50%;
+  top: calc(100% + 6px);
+}
+[dir="rtl"] .tip[data-tip]::after {
+  transform: translate(50%, 2px);
+}
+.tip[data-tip][data-tip-side="top"]::after {
+  top: auto;
+  bottom: calc(100% + 6px);
+}
+.tip[data-tip][data-tip-side="end"]::after {
+  top: 50%;
+  inset-inline-start: calc(100% + 8px);
+  transform: translate(0, -50%);
+}
+.tip[data-tip][data-tip-side="start"]::after {
+  top: 50%;
+  inset-inline-start: auto;
+  inset-inline-end: calc(100% + 8px);
+  transform: translate(0, -50%);
+}
+.tip[data-tip]:hover::after,
+.tip[data-tip]:focus-visible::after {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.tip[data-tip][data-tip-side="end"]:hover::after,
+.tip[data-tip][data-tip-side="start"]:hover::after,
+.tip[data-tip][data-tip-side="end"]:focus-visible::after,
+.tip[data-tip][data-tip-side="start"]:focus-visible::after {
+  transform: translate(0, -50%);
+}
+@starting-style {
+  .tip[data-tip]:hover::after,
+  .tip[data-tip]:focus-visible::after {
+    opacity: 0;
+  }
+}
+@media (hover: none) {
+  .tip[data-tip]::after {
+    display: none;
+  }
+}

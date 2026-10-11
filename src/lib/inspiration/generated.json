@@ -1,0 +1,167 @@
+{
+  "arch-concrete-arches": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#cfc8bd"
+  },
+  "arch-stair": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#e1d9cc"
+  },
+  "arch-colonnade": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#dbd2c4"
+  },
+  "arch-curve": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#cbc8d3"
+  },
+  "nature-leaf-shadow": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#e3d9c5"
+  },
+  "nature-dunes": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#d7bf9f"
+  },
+  "nature-sea": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#c6c9cb"
+  },
+  "nature-pebbles": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#c0b9ad"
+  },
+  "nature-fern": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#deded0"
+  },
+  "art-cutouts": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#dbd3c5"
+  },
+  "art-line-portrait": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#f0eae1"
+  },
+  "art-brush": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#e3ded7"
+  },
+  "abs-color-field": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#d2c2c7"
+  },
+  "abs-gradient-dawn": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#e3d3cd"
+  },
+  "abs-shapes": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#d4cec0"
+  },
+  "tex-linen": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#cec4b2"
+  },
+  "tex-knit": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#d1ccc5"
+  },
+  "tex-terrazzo": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#e4ddd1"
+  },
+  "tex-marble": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#ddd9d9"
+  },
+  "tex-crumpled": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#c6bcc9"
+  },
+  "urban-windows": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#b4aeaa"
+  },
+  "urban-crosswalk": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#a5a19a"
+  },
+  "urban-skyline": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#ada7b2"
+  },
+  "fd-buttons": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#c8d0be"
+  },
+  "fd-pleats": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#e0c5bd"
+  },
+  "fd-stitching": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#546278"
+  },
+  "fd-scallop": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#ded7e0"
+  },
+  "hist-deco": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#384057"
+  },
+  "hist-damask": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#d8cebe"
+  },
+  "hist-bauhaus": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#dcc9b7"
+  },
+  "life-window-light": {
+    "width": 1200,
+    "height": 900,
+    "dominant": "#e6dfd3"
+  },
+  "life-coffee": {
+    "width": 1000,
+    "height": 1000,
+    "dominant": "#d9ccb9"
+  },
+  "life-beach": {
+    "width": 900,
+    "height": 1125,
+    "dominant": "#ded3bf"
+  }
+}
